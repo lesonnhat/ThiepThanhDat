@@ -72,41 +72,18 @@
 							{% if product.variants.size == 1 and product.variants.first.title contains 'Default' and product.options.size == 1 %}
 							{% assign hide_default_title = true %}
 							{% endif %}	
-							<form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">				
-								<div class="selector-actions">
-									<div class="wrap-addcart clearfix">						
-										<button type="button" id="add-to-cart" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal {{className}}" name="add"> 
-											{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
-										</button>
-										<button type="button" id="buy-now" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal hidden {{className}}" name="add"> 
-											{% if  product.available %}	Mua ngay {% else %} Hết hàng {% endif %}
-										</button>
-									</div>
-								</div>
-								{% if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appbuyxgety' %}
-								<div class="selector-buyxgety">							
-									<div id="buyxgety-program" class="hidden">
-										<div class="buyxgety-heading">
-											<h3>Các sản phẩm được tặng kèm</h3>								
-											<p>Chọn 1 trong các loại quà tặng</p>
-										</div>							
-										<div id="buyxgety-product-list" data-id="{{product.id}}" data-title="{{product.title}}">
-											<div class="buyxgety_content clearfix">									
-												<div class="buyxgety_lists"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								{% endif %}
-								<div class="product-action-bottom visible-xs">
-									<div class="input-bottom">
-										<input id="quan-input" type="number" value="1" min="1">
-									</div>
-									<button type="button" id="add-to-cartbottom" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct add-cart-bottom button dark addtocart-modal" name="add"> 
-										{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
-									</button>
-								</div>
-							</form>
+							<form class="contact-zalo">
+                <div class="selector-actions">
+                  <div class="wrap-addcart clearfix">
+                    <a href="https://zalo.me/0838333537"
+                       target="_blank" rel="noopener"
+                       class="button dark btn-zalo {{ className }}"
+                       aria-label="Liên hệ Zalo 0838.33.35.37">
+                      LIÊN HỆ ZALO 0838.33.35.37
+                    </a>
+                  </div>
+                </div>
+              </form>
 							<div class="product-description">	
 								<div class="title-bl">
 									<h2>Mô tả</h2>
@@ -170,41 +147,18 @@
 							{% if product.variants.size == 1 and product.variants.first.title contains 'Default' and product.options.size == 1 %}
 							{% assign hide_default_title = true %}
 							{% endif %}	
-							<form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">				
-								<div class="selector-actions">
-									<div class="wrap-addcart clearfix">						
-										<button type="button" id="add-to-cart" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal {{className}}" name="add"> 
-											{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
-										</button>
-										<button type="button" id="buy-now" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal hidden {{className}}" name="add"> 
-											{% if  product.available %}	Mua ngay {% else %} Hết hàng {% endif %}
-										</button>
-									</div>	
-								</div>
-								{% if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appbuyxgety' %}
-								<div class="selector-buyxgety">							
-									<div id="buyxgety-program" class="hidden">
-										<div class="buyxgety-heading">
-											<h3>Các sản phẩm được tặng kèm</h3>								
-											<p>Chọn 1 trong các loại quà tặng</p>
-										</div>							
-										<div id="buyxgety-product-list" data-id="{{product.id}}" data-title="{{product.title}}">
-											<div class="buyxgety_content clearfix">									
-												<div class="buyxgety_lists"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								{% endif %}
-								<div class="product-action-bottom visible-xs">
-									<div class="input-bottom">
-										<input id="quan-input" type="number" value="1" min="1">
-									</div>
-									<button type="button" id="add-to-cartbottom" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct add-cart-bottom button dark addtocart-modal" name="add"> 
-										{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
-									</button>
-								</div>
-							</form>
+							<form class="contact-zalo">
+                <div class="selector-actions">
+                  <div class="wrap-addcart clearfix">
+                    <a href="https://zalo.me/0838333537"
+                       target="_blank" rel="noopener"
+                       class="button dark btn-zalo {{ className }}"
+                       aria-label="Liên hệ Zalo 0838.33.35.37">
+                      LIÊN HỆ ZALO 0838.33.35.37
+                    </a>
+                  </div>
+                </div>
+              </form>
 							<div class="product-description">	
 								<div class="title-bl">
 									<h2>Mô tả</h2>
@@ -282,42 +236,18 @@
 							{% if product.variants.size == 1 and product.variants.first.title contains 'Default' and product.options.size == 1 %}
 							{% assign hide_default_title = true %}
 							{% endif %}	
-							<form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">				
-								<div class="selector-actions">
-									<div class="wrap-addcart clearfix">						
-										<button type="button" id="add-to-cart" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal {{className}}" name="add"> 
-											{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
-										</button>
-										<button type="button" id="buy-now" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal hidden {{className}}" name="add"> 
-											{% if  product.available %}	Mua ngay {% else %} Hết hàng {% endif %}
-										</button>
-									</div>	
-								</div>
-								{% if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appbuyxgety' %}
-								<div class="selector-buyxgety">							
-									<div id="buyxgety-program" class="hidden">
-										<div class="buyxgety-heading">
-											<h3>Các sản phẩm được tặng kèm</h3>								
-											<p>Chọn 1 trong các loại quà tặng</p>
-										</div>							
-										<div id="buyxgety-product-list" data-id="{{product.id}}" data-title="{{product.title}}">
-											<div class="buyxgety_content clearfix">									
-												<div class="buyxgety_lists"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								{% endif %}
-
-								<div class="product-action-bottom visible-xs">
-									<div class="input-bottom">
-										<input id="quan-input" type="number" value="1" min="1">
-									</div>
-									<button type="button" id="add-to-cartbottom" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct add-cart-bottom button dark addtocart-modal" name="add"> 
-										{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
-									</button>
-								</div>
-							</form>
+							<form class="contact-zalo">
+                <div class="selector-actions">
+                  <div class="wrap-addcart clearfix">
+                    <a href="https://zalo.me/0838333537"
+                       target="_blank" rel="noopener"
+                       class="button dark btn-zalo {{ className }}"
+                       aria-label="Liên hệ Zalo 0838.33.35.37">
+                      LIÊN HỆ ZALO 0838.33.35.37
+                    </a>
+                  </div>
+                </div>
+              </form>
 							<div class="product-description">	
 								<div class="title-bl">
 									<h2>Mô tả</h2>
