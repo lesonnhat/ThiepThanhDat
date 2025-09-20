@@ -68,15 +68,6 @@
 								{% endif %}
 								{% unless product.available %}<span class="pro-soldold">Hết hàng</span>{% endunless %} 		
 							</div>
-							<div class="product-price" id="price-preview">
-								{% if product.compare_at_price > product.price %}
-								<span class="pro-sale">-{{product.compare_at_price | minus: product.price | divided_by:product.compare_at_price | times : 100 | round : 0}}% </span>
-								{% endif %}	
-								<span class="pro-price">{{ product.price | money }}</span>
-								{% if product.compare_at_price > product.price %}
-								<del>{{ product.compare_at_price | money }}</del>
-								{% endif %}
-							</div>
 							{% assign hide_default_title = false %}
 							{% if product.variants.size == 1 and product.variants.first.title contains 'Default' and product.options.size == 1 %}
 							{% assign hide_default_title = true %}
@@ -206,15 +197,6 @@
 								<span id="pro_sku"><strong>SKU:</strong>{{product.variants[0].sku}}</span>
 								{% endif %}
 								{% unless product.available %}<span class="pro-soldold">Hết hàng</span>{% endunless %} 		
-							</div>
-							<div class="product-price" id="price-preview">
-								{% if product.compare_at_price > product.price %}
-								<span class="pro-sale">-{{product.compare_at_price | minus: product.price | divided_by:product.compare_at_price | times : 100 | round : 0}}% </span>
-								{% endif %}	
-								<span class="pro-price">{{ product.price | money }}</span>
-								{% if product.compare_at_price > product.price %}
-								<del>{{ product.compare_at_price | money }}</del>
-								{% endif %}
 							</div>
 							{% assign hide_default_title = false %}
 							{% if product.variants.size == 1 and product.variants.first.title contains 'Default' and product.options.size == 1 %}
@@ -359,15 +341,6 @@
 								<span id="pro_sku"><strong>SKU:</strong>{{product.variants[0].sku}}</span>
 								{% endif %}
 								{% unless product.available %}<span class="pro-soldold">Hết hàng</span>{% endunless %} 		
-							</div>
-							<div class="product-price" id="price-preview">
-								{% if product.compare_at_price > product.price %}
-								<span class="pro-sale">-{{product.compare_at_price | minus: product.price | divided_by:product.compare_at_price | times : 100 | round : 0}}% </span>
-								{% endif %}		
-								<span class="pro-price">{{ product.price | money }}</span>
-								{% if product.compare_at_price > product.price %}
-								<del>{{ product.compare_at_price | money }}</del>
-								{% endif %}
 							</div>
 							{% assign hide_default_title = false %}
 							{% if product.variants.size == 1 and product.variants.first.title contains 'Default' and product.options.size == 1 %}
