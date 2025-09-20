@@ -73,38 +73,7 @@
 							{% assign hide_default_title = true %}
 							{% endif %}	
 							<form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">				
-								<div class="select clearfix"{% if hide_default_title %} style="display:none"{% endif %}>
-									<select id="product-select" name="id" style="display:none;">
-										{% for variant in product.variants %}
-										<option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
-										{% endfor %}
-									</select>
-								</div>
-								<div class="select-swatch clearfix">
-									{% if product.available and product.variants.size > 1 %}
-									{% for option in product.options %}
-									{% include 'swatch' with option %}
-									{% endfor %}
-									{% endif %}
-								</div>
 								<div class="selector-actions">
-
-									{%-if checkgift-%}
-									<button type="button" disabled  class="disabled btn-product-gift button dark " name="add"> 
-										Hàng tặng không bán
-									</button>
-									{%-else-%}
-									<div class="quantity-area clearfix">
-										<input type="button" value="-" onclick="minusQuantity()" class="qty-btn">
-										<input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
-										<input type="button" value="+" onclick="plusQuantity()" class="qty-btn">
-									</div>
-									{%-assign className = ''-%}
-									{%-if settings.promotion_hrvapp_use-%}
-									{%-if settings.promotion_hrvapp == 'appbuyxgety'-%}
-									{%-assign className = 'loading'-%}
-									{%-endif-%}	
-									{%-endif-%}
 									<div class="wrap-addcart clearfix">						
 										<button type="button" id="add-to-cart" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal {{className}}" name="add"> 
 											{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
@@ -112,8 +81,7 @@
 										<button type="button" id="buy-now" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal hidden {{className}}" name="add"> 
 											{% if  product.available %}	Mua ngay {% else %} Hết hàng {% endif %}
 										</button>
-									</div>	
-									{%-endif-%}
+									</div>
 								</div>
 								{% if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appbuyxgety' %}
 								<div class="selector-buyxgety">							
@@ -203,38 +171,7 @@
 							{% assign hide_default_title = true %}
 							{% endif %}	
 							<form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">				
-								<div class="select clearfix"{% if hide_default_title %} style="display:none"{% endif %}>
-									<select id="product-select" name="id" style="display:none;">
-										{% for variant in product.variants %}
-										<option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
-										{% endfor %}
-									</select>
-								</div>
-								<div class="select-swatch clearfix">
-									{% if product.available and product.variants.size > 1 %}
-									{% for option in product.options %}
-									{% include 'swatch' with option %}
-									{% endfor %}
-									{% endif %}
-								</div>
 								<div class="selector-actions">
-
-									{%- if checkgift -%}
-									<button type="button" disabled  class="disabled btn-product-gift button dark " name="add"> 
-										Hàng tặng không bán
-									</button>
-									{%- else -%}
-									<div class="quantity-area clearfix">
-										<input type="button" value="-" onclick="minusQuantity()" class="qty-btn">
-										<input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
-										<input type="button" value="+" onclick="plusQuantity()" class="qty-btn">
-									</div>
-									{%-assign className = ''-%}
-									{%-if settings.promotion_hrvapp_use-%}
-									{%-if settings.promotion_hrvapp == 'appbuyxgety'-%}
-									{%-assign className = 'loading'-%}
-									{%-endif-%}	
-									{%-endif-%}
 									<div class="wrap-addcart clearfix">						
 										<button type="button" id="add-to-cart" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal {{className}}" name="add"> 
 											{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
@@ -243,7 +180,6 @@
 											{% if  product.available %}	Mua ngay {% else %} Hết hàng {% endif %}
 										</button>
 									</div>	
-									{%- endif -%}
 								</div>
 								{% if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appbuyxgety' %}
 								<div class="selector-buyxgety">							
@@ -347,38 +283,7 @@
 							{% assign hide_default_title = true %}
 							{% endif %}	
 							<form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">				
-								<div class="select clearfix"{% if hide_default_title %} style="display:none"{% endif %}>
-									<select id="product-select" name="id" style="display:none;">
-										{% for variant in product.variants %}
-										<option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
-										{% endfor %}
-									</select>
-								</div>
-								<div class="select-swatch clearfix">
-									{% if product.available and product.variants.size > 1 %}
-									{% for option in product.options %}
-									{% include 'swatch' with option %}
-									{% endfor %}
-									{% endif %}
-								</div>
 								<div class="selector-actions">
-
-									{%- if checkgift -%}
-									<button type="button" disabled  class="disabled btn-product-gift button dark " name="add"> 
-										Hàng tặng không bán
-									</button>
-									{%- else -%}
-									<div class="quantity-area clearfix">
-										<input type="button" value="-" onclick="minusQuantity()" class="qty-btn">
-										<input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
-										<input type="button" value="+" onclick="plusQuantity()" class="qty-btn">
-									</div>
-									{%-assign className = ''-%}
-									{%-if settings.promotion_hrvapp_use-%}
-									{%-if settings.promotion_hrvapp == 'appbuyxgety'-%}
-									{%-assign className = 'loading'-%}
-									{%-endif-%}	
-									{%-endif-%}
 									<div class="wrap-addcart clearfix">						
 										<button type="button" id="add-to-cart" {% unless product.available %}disabled{% endunless %}  class="{% unless product.available %}disabled{% endunless %} add-to-cartProduct button dark btn-addtocart addtocart-modal {{className}}" name="add"> 
 											{% if  product.available %}	Thêm vào giỏ {% else %} Hết hàng {% endif %}
@@ -387,7 +292,6 @@
 											{% if  product.available %}	Mua ngay {% else %} Hết hàng {% endif %}
 										</button>
 									</div>	
-									{%- endif -%}
 								</div>
 								{% if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appbuyxgety' %}
 								<div class="selector-buyxgety">							
