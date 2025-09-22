@@ -168,7 +168,7 @@ HEADER
 --------------------------------------------------------------------------------*/
 .search-bar-mobile {display: none;padding: 5px;position: relative;}
 .search-bar-mobile form.searchform{position: relative;}
-.search-bar-mobile form.searchform input.searchinput {padding: 0 40px 0 10px;height: 32px;	font-size: 12px;}
+.search-bar-mobile form.searchform input.searchinput {padding: 0 40px 0 10px;height: 35px;	font-size: 14px;}
 .search-bar-mobile form.searchform .btn-search {top: 0px;	right:0px;width: 40px;height: 32px;	line-height: 32px;}
 .search-bar-mobile form.searchform .btn-search svg {width:14px;height:30px;} 
 .search-bar-mobile form.searchform .close-search {
@@ -434,7 +434,7 @@ HEADER
 		opacity: 1;	visibility: visible;
 		-webkit-transform: translateY(0);transform: translateY(0);
 	}
-	.main-header .header-upper-middle{padding:10px 0px;    position: relative;}
+	.main-header .header-upper-middle{padding:20px 0px;    position: relative;}
 	.flexContainer-header>div.header-upper-logo { padding-right:5px;padding-left:5px;text-align: center;}
 	.flexContainer-header>div.header-upper-icon{padding-left:0;}
 
@@ -2611,7 +2611,7 @@ form.searchform input:focus {background: #ffffff;outline: none;border-color:{{se
 .smart-search-wrapper .item-ult{padding: 10px 10px;	border-bottom: 1px dotted #dfe0e1;clear: both; }
 .smart-search-wrapper .item-ult .thumbs{width: 40px;display: inline-block;text-align: right;}
 .smart-search-wrapper .item-ult .title {width: calc(100% - 40px);padding-right:5px;float: left;line-height: 20px;position: relative;margin-top:0px!important;}
-.smart-search-wrapper .item-ult .title a{	font-size: 13px;text-overflow: ellipsis;overflow: hidden;	white-space: pre;	float: left;width: 100%;margin-bottom: 4px;}
+.smart-search-wrapper .item-ult .title a{	font-size: 14px;text-overflow: ellipsis;overflow: hidden;	white-space: pre;	float: left;width: 100%;margin-bottom: 4px;}
 .smart-search-wrapper .item-ult .title p{	line-height: 15px;font-size: 12px;font-weight:600;float:left;margin:0;}
 .smart-search-wrapper .item-ult .title p del{	font-size: 11px;font-weight: 300;margin-left:5px;color: #797979;}
 .resultsMore {width: 100%;	float: left;}
@@ -3458,7 +3458,7 @@ RESPONSIVE
 	.AccountSidebar {margin-bottom: 40px;}
 	.table-responsive {padding: 0 8px 10px}
 	
-	.breadcrumb-shop .breadcrumb-arrows li {font-size:10px;}
+	.breadcrumb-shop .breadcrumb-arrows li {font-size:13px;}
 }
 
 /* Ẩn tài khoản & giỏ hàng phòng trường hợp còn sót nơi khác */
