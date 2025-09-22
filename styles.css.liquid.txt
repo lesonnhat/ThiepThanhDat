@@ -277,13 +277,13 @@ HEADER
 .topbar p {padding: 4px 0;margin-bottom:0;}
 .main-header.hSticky-nav .topbar{display:none}
 .flexContainer-header {
-	margin:0 -15px;
+	margin: 0px;
 	display: -ms-flexbox; display: -webkit-flex;  display: flex;
 	-webkit-align-items: center;-ms-align-items: center;align-items: center;
 	-webkit-justify-content: space-between;	justify-content: space-between;
 	-webkit-flex-flow: row nowrap;-ms-flex-flow: row nowrap;flex-flow: row nowrap;
 }
-.flexContainer-header>div[class*='header-upper-'] {padding: 0 15px;}
+.flexContainer-header>div[class*='header-upper-'] {padding: 0 5px;}
 .header-upper-navbar .header-action{display: inline-block;vertical-align: middle;}
 .header-upper-navbar .header-action_backlink{display:none;width:25px;padding-left:2px;  margin-right: 5px;}
 .header-upper-navbar .header-action_backlink a{display: block; font-size: 28px;}
@@ -440,7 +440,7 @@ HEADER
 
 	.flexContainer-header>div.header-upper-logo .wrap-logo img{max-width:180px;max-height:60px;}
 	.flexContainer-header>div[class*='header-upper-'],
-	.flexContainer-header .header-wrap-icon{position: initial;}
+	.flexContainer-header .header-wrap-icon{position: ;}
 	.header-action_text .header-action__link .box-text{display:none}
 	.search-bar-mobile {display: block;}
 	.main-header:not(.hSticky-nav) .header-search-mobile{border-top: 1px solid #f5f5f5;}
@@ -462,8 +462,8 @@ HEADER
 	.main-body-product .main-header.hSticky-nav .header-action_menu .box-triangle {left: 50px;}
 	/* end */	
 	.header-action_dropdown{
-		right: 0;left: 0;top: 100%;
-		width: 100vw;height:100vh;
+		right: 0;left: 0;top: 155%;
+		width: 94vw;height:80vh;
 	}
 	.header-action_dropdown .header-dropdown_content{overflow: auto;padding-bottom:210px;	-webkit-overflow-scrolling: touch;}
 	.header-action_menu .header-action_dropdown .header-dropdown_content{padding:0 0px 80px;}
@@ -3459,4 +3459,159 @@ RESPONSIVE
 	.table-responsive {padding: 0 8px 10px}
 	
 	.breadcrumb-shop .breadcrumb-arrows li {font-size:10px;}
+}
+
+/* Ẩn tài khoản & giỏ hàng phòng trường hợp còn sót nơi khác */
+.header-action_account,
+.header-action_cart {
+  display: none !important;
+}
+
+/* Biến cụm giữa thành flex và CĂN GIỮA toàn bộ */
+.header-upper-middle .container-fluid {
+  display: flex;           /* đảm bảo container là flex */
+}
+.header-upper-middle .flexContainer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;   /* đưa cụm logo + search vào giữa */
+  width: 100%;
+  gap: 16px; /* khoảng cách nhẹ giữa logo và search */
+}
+
+/* Logo không đẩy nội dung lệch trái */
+.header-upper-logo {
+  margin-right: 0 !important;  /* nếu theme đang set auto thì reset lại */
+}
+
+/* Giới hạn chiều rộng ô tìm kiếm (rút ngắn lại) */
+.header-upper-search {
+  flex: 0 1 600px;        /* co giãn tối đa ~620px */
+  max-width: 600px;
+  width: 100%;
+  margin: 0;              /* tránh auto margin làm lệch */
+}
+
+/* Bảo đảm input chiếm hết chiều ngang khối search đã giới hạn */
+.header-upper-search .search-box,
+.header-upper-search .wpo-search-inner,
+.header-upper-search .input-search {
+  width: 100%;
+}
+
+/* (Tuỳ chọn) Chiều cao/padding ô tìm kiếm gọn hơn một chút */
+.header-upper-search .wpo-search-inner {
+  padding: 10px 12px;  /* điều chỉnh nếu bạn muốn mỏng hơn/dày hơn */
+}
+
+/* Thu nhỏ chiều cao nút search để khớp với input */
+#search-header-btn {
+  height: 40px !important;   /* chỉnh cho bằng với input */
+  padding: 0 14px !important; /* padding vừa đủ, không bị cao quá */
+  line-height: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Đảm bảo input và button nằm ngang đều nhau */
+.header-upper-search .wpo-search-inner {
+  display: flex;
+  align-items: center;
+}
+.header-upper-search .input-search {
+  height: 40px !important;   /* đồng bộ chiều cao */
+  line-height: 40px !important;
+  padding: 0 12px;
+}
+
+/* Menu desktop thật sự vào giữa */
+.header-menu-desktop .header-navbar-menu {
+  display: flex;
+  justify-content: center !important;
+}
+.header-menu-desktop .navbar-mainmenu {
+  margin: 0 auto !important;
+}
+
+/* FORM search: đặt flex để input + button cùng hàng và căn giữa dọc */
+.header-upper-search .search-box form.searchform-product {
+  display: flex;
+  align-items: center;
+  gap: 8px;                 /* khoảng cách giữa input và nút */
+}
+
+/* Khối input chiếm hết phần còn lại, bỏ padding thừa để không đội chiều cao */
+.header-upper-search .wpo-search-inner {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 !important;    /* bỏ padding top/bottom gây lệch */
+}
+
+/* Input: chiều cao gọn, full width trong khối của nó */
+.header-upper-search .input-search {
+  width: 100%;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* Nút search: cùng chiều cao với input, không bị nhô */
+#search-header-btn {
+  height: 40px !important;
+  padding: 0 14px !important;
+  line-height: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;     /* tránh margin mặc định */
+}
+
+/* (tuỳ chọn) bo tròn khớp nhau nếu theme dùng border-radius */
+.header-upper-search .input-search { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+#search-header-btn { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+
+/* ====== MOBILE (<=767px): menu trái, logo giữa ====== */
+@media (max-width: 767px) {
+
+  /* Cho container relative để có thể đặt menu */
+  .header-upper-middle .container-fluid {
+    position: relative;
+  }
+
+  /* Menu icon hiển thị và dính góc trái */
+  .header-upper-navbar {
+    display: block !important;   /* ép hiện lại */
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+
+  /* Logo căn giữa */
+  .header-upper-middle .flexContainer-header {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
+  }
+  .header-upper-logo {
+    margin: 0 auto !important;
+    text-align: center;
+    flex: 0 1 auto;
+  }
+  .header-upper-logo .wrap-logo,
+  .header-upper-logo .logoimg {
+    display: inline-block;
+  }
+
+  /* Ẩn icon thừa (account, cart) nếu còn */
+  .header-upper-icon,
+  .header-action_account,
+  .header-action_cart {
+    display: none !important;
+  }
 }
