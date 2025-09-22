@@ -151,7 +151,7 @@
 	</div>
 	<div class="bottom-footer text-center">
 		<div class="container-fluid">
-			<p>Copyright © {{ "now" | date: "%Y" }} <a href="{{ shop.url }}"> {{ shop.name }}</a>. <a target="_blank" rel="noreferrer" href="https://www.haravan.com">Powered by Haravan</a></p>
+			<p>Copyright © {{ "now" | date: "%Y" }} <a href="{{ shop.url }}"> {{ shop.name }}</a>.</p>
 		</div>
 	</div>
 </footer>
