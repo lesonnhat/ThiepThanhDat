@@ -3615,3 +3615,9 @@ RESPONSIVE
     display: none !important;
   }
 }
+
+/* Chỉnh vị trí icon TikTok footer */
+.footerNav-social li a.icon-tiktok svg{
+  transform: translate(2px, 3px); /* +X sang phải 1px, +Y xuống dưới 1px */
+  display: inline-block;
+}
