@@ -58,10 +58,6 @@
 		</a>	
 		<div class="button-add hidden">
 			<button type="submit" title="Buy now" class="action" onclick="buy_now('{{ product.variants.first.id }}')">Mua ngay<i class="fa fa-long-arrow-right"></i></button>
-		</div>	
-		<div class="pro-price-mb">	
-			<span class="pro-price">{{ product.variants.first.price | money }}</span>
-			{% if on_sale %}<span class="pro-price-del"><del class="compare-price">{{ product.variants.first.compare_at_price | money }}</del></span>{% endif %}
 		</div>
 	</div>
 	<div class="product-detail clearfix">
