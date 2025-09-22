@@ -1052,7 +1052,7 @@
 						<td><input type="text" name="social_link_instagram" id="social_link_instagram" /></td>
 					</tr>						
 					<tr>
-						<td><label for="social_link_google">Link Google +</label></td>
+						<td><label for="social_link_google">Link Tiktok</label></td>
 						<td><input type="text" name="social_link_google" id="social_link_google" /></td>
 					</tr>	
 					<tr>
