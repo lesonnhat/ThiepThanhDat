@@ -71,18 +71,6 @@
 					{{ product.title }}
 				</a>
 			</h3>
-			<div class="box-pro-prices">	
-				<p class="pro-price {% if on_sale %}highlight{% endif %}">
-					<span>{{ product.variants.first.price | money }}</span>
-					{% if on_sale %}
-					<span class="pro-price-del">
-						<del class="compare-price">
-							{{ product.variants.first.compare_at_price | money }}
-						</del>
-					</span>
-					{% endif %}
-				</p>
-			</div>
 		</div>
 	</div>
 </div>
