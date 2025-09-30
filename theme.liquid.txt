@@ -84,6 +84,17 @@
 		{%-else-%}
 			 {{ serverHead | remove: srcBuyXY2 | remove: srcBuyXY3 | remove: srcCombo2 | remove: srcCombo3  }}
 		{%-endif-%}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J6JC3JSLKQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-J6JC3JSLKQ');
+    </script>
+    
 	</head>
 	<body id="lama-theme" class="{%- if template contains 'contact' -%}page-contact{%- else -%}{{template | split: '.' | first | replace: ''}}{%- endif -%}">
 		{% include 'svg-icon' %}
